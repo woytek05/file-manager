@@ -9,6 +9,7 @@ setUpThemeToggle(
 
 setUpDialogHeader(
     "dialog-header",
+    "dialog-form",
     "new-folder-container",
     "new-text-file-container"
 );

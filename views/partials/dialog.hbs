@@ -30,12 +30,16 @@
                     class="mb-4 text-xl font-medium text-gray-900 dark:text-white"
                 >
                 </h3>
-                <form class="space-y-6" action="#">
+                <form
+                    id="dialog-form"
+                    class="space-y-6"
+                    action="/"
+                    method="POST"
+                >
                     <div>
                         <input
                             type="text"
-                            name="newFolderName"
-                            id="email"
+                            name="newElementName"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Name"
                             required

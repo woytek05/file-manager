@@ -76,6 +76,23 @@ app.post("/createNewFolder", (req, res) => {
     res.redirect("/");
 });
 
+app.post("/createNewTextFile", (req, res) => {
+    const filePath = path.join(CONSTANTS.UPLOAD_PATH, req.body.newElementName);
+
+    functions
+        .checkIfPathExists(filePath)
+        .then((exists) => {
+            if (!exists) {
+                functions.createNewTextFile(filePath);
+            }
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+        });
+
+    res.redirect("/");
+});
+
 app.use(express.static("static"));
 
 app.listen(CONSTANTS.PORT, function () {

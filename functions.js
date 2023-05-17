@@ -35,6 +35,14 @@ const checkIfPathExists = async (path) => {
     }
 };
 
+const createNewTextFile = async (textFilePath) => {
+    try {
+        await fsPromises.writeFile(`${textFilePath}.txt`, "");
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 const createNewFolder = async (folderPath) => {
     try {
         await fsPromises.mkdir(folderPath);
@@ -65,5 +73,6 @@ const sortFoldersAndFiles = (array) => {
 module.exports = {
     getContentsOfUpload,
     checkIfPathExists,
+    createNewTextFile,
     createNewFolder,
 };

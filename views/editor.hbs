@@ -1,0 +1,16 @@
+<div class="w-full h-screen">
+    {{> dialog}}
+    {{#if textFile}}
+        {{> textFileSidebar}}
+    {{else}}
+        {{> imageFileSidebar}}
+    {{/if}}
+
+    <div class="p-4 {{#if textFile}}sm:ml-64{{/if}}">
+        {{#if textFile}}
+            {{> textEditor}}
+        {{else}}
+            {{> imageEditor}}
+        {{/if}}
+    </div>
+</div>

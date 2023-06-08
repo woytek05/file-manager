@@ -4,6 +4,7 @@
     <button
         type="button"
         class="absolute top-0.5 right-0.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+        onclick="removeElement('{{root}}', '{{type}}', '{{name}}')"
     >
         <svg
             class="w-5 h-5"
@@ -17,24 +18,39 @@
         </svg>
         <span class="sr-only">Close modal</span>
     </button>
+    <div
+        onclick="redirect('{{root}}', '{{type}}', '{{name}}')"
+        class="cursor-pointer"
+    >
+        {{#ifeq type "folder"}}
+            <box-icon
+                type="solid"
+                name="folder"
+                color="currentColor"
+                class="w-12 h-12 text-yellow-500"
+            ></box-icon>
+        {{/ifeq}}
 
-    {{#ifeq type "folder"}}
-        <box-icon
-            type="solid"
-            name="folder"
-            color="currentColor"
-            class="w-12 h-12 text-yellow-500"
-        ></box-icon>
-    {{/ifeq}}
+        {{#ifeq type "file"}}
+            {{#ifincludes ../availableExtensions ../extension}}
+                <box-icon
+                    type="solid"
+                    name="file-{{../extension}}"
+                    color="currentColor"
+                    class="w-12 h-12 text-gray-500"
+                ></box-icon>
+            {{/ifincludes}}
 
-    {{#ifeq type "file"}}
-        <box-icon
-            type="solid"
-            name="file"
-            color="currentColor"
-            class="w-12 h-12 text-gray-500"
-        ></box-icon>
-    {{/ifeq}}
-
+            {{#ifnotincludes ../availableExtensions ../extension}}
+                <box-icon
+                    type="solid"
+                    name="file"
+                    color="currentColor"
+                    class="w-12 h-12 text-gray-500"
+                ></box-icon>
+            {{/ifnotincludes}}
+            
+        {{/ifeq}}
+    </div>
     <span class="p-2 dark:text-white">{{name}}</span>
 </div>

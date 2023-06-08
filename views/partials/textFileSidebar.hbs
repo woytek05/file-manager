@@ -40,110 +40,111 @@
         </a>
         <ul class="space-y-2 font-medium">
             <li>
-                <div
-                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white"
-                >
-                    <box-icon
-                        type="solid"
-                        name="user-account"
-                        aria-hidden="true"
-                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                        color="currentColor"
-                    ></box-icon>
-
-                    <span class="ml-3">Hello
-                        <span
-                            class="bg-blue-100 text-blue-800 text-sm font-medium mr-1 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300"
-                        >{{userLogin}}</span>!</span>
-                </div>
-            </li>
-            <li>
-                <div
-                    id="new-folder-container"
-                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
-                    data-modal-target="dialog"
-                    data-modal-toggle="dialog"
-                >
-                    <box-icon
-                        type="solid"
-                        name="folder-plus"
-                        aria-hidden="true"
-                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                        color="currentColor"
-                    ></box-icon>
-
-                    <span class="ml-3">New Folder</span>
-                </div>
-            </li>
-
-            {{#ifuneq folders.length 1}}
-                <li>
+                <div class="grid grid-cols-3 text-gray-900">
                     <div
-                        id="folder-name-change-container"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
-                        data-modal-target="dialog"
-                        data-modal-toggle="dialog"
+                        class="flex items-center justify-center rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer p-2"
+                        onclick="decreaseFontSize()"
                     >
                         <box-icon
                             type="solid"
-                            name="folder"
+                            name="minus-circle"
                             aria-hidden="true"
                             class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                             color="currentColor"
                         ></box-icon>
-                        <span class="ml-3">Change Folder Name</span>
                     </div>
-                </li>
-            {{/ifuneq}}
+                    <div
+                        class="flex items-center justify-center rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer p-2"
+                        onclick="changeTheme()"
+                    >
+                        <box-icon
+                            type="solid"
+                            name="palette"
+                            aria-hidden="true"
+                            class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                            color="currentColor"
+                        ></box-icon>
+                    </div>
+                    <div
+                        class="flex items-center justify-center rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer p-2"
+                        onclick="increaseFontSize()"
+                    >
+                        <box-icon
+                            type="solid"
+                            name="plus-circle"
+                            aria-hidden="true"
+                            class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                            color="currentColor"
+                        ></box-icon>
+                    </div>
+                </div>
+            </li>
 
             <li>
                 <div
-                    id="new-text-file-container"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+                    onclick="saveYourSettings('{{root}}')"
+                >
+                    <box-icon
+                        type="solid"
+                        name="save"
+                        aria-hidden="true"
+                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        color="currentColor"
+                    ></box-icon>
+                    <span class="ml-3">Save Your Settings</span>
+                </div>
+            </li>
+
+            <li>
+                <div
+                    id="folder-name-change-container"
                     class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
                     data-modal-target="dialog"
                     data-modal-toggle="dialog"
                 >
                     <box-icon
                         type="solid"
-                        name="file-plus"
+                        name="rename"
                         aria-hidden="true"
                         class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                         color="currentColor"
                     ></box-icon>
-                    <span class="flex-1 ml-3 whitespace-nowrap">New Text File</span>
+                    <span class="flex-1 ml-3 whitespace-nowrap">Change File Name</span>
                 </div>
             </li>
+
             <li>
-                <a
+                <div
                     class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
-                    href="/logout"
+                    onclick="previewFile('{{root}}')"
                 >
                     <box-icon
                         type="solid"
-                        name="log-out"
+                        name="file"
                         aria-hidden="true"
                         class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                         color="currentColor"
                     ></box-icon>
-                    <span class="flex-1 ml-3 whitespace-nowrap">Log out</span>
-                </a>
+                    <span class="flex-1 ml-3 whitespace-nowrap">Preview File</span>
+                </div>
             </li>
+
             <li>
                 <div
-                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+                    onclick="redirectToPath('{{root}}', true)"
                 >
-                    <input
-                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-100 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 p-2"
-                        id="files"
-                        type="file"
-                        multiple
-                    />
+                    <box-icon
+                        type="solid"
+                        name="folder"
+                        aria-hidden="true"
+                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        color="currentColor"
+                    ></box-icon>
+                    <span class="flex-1 ml-3 whitespace-nowrap">Show File In
+                        Folder</span>
                 </div>
-                <button
-                    type="submit"
-                    class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-2"
-                    onclick="handleUpload('files')"
-                >Submit</button>
             </li>
         </ul>
         <button

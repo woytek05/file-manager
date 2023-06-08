@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f7ef9fef-9a0c-472a-9c59-c2c6565e1821" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/setUpDialogHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/setUpDialogHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/Content.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/Footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/Item.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/c.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/dialog.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/dialog.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/sidebar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/sidebar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/storageElement.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/storageElement.hbs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2QN3q4BpMCQKnlKSWaFMZ2dzzYs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/wojciechwysocki/Websites/file-manager",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7ef9fef-9a0c-472a-9c59-c2c6565e1821" name="Changes" comment="" />
+      <created>1685180399736</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685180399736</updated>
+      <workItem from="1685180400715" duration="54000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

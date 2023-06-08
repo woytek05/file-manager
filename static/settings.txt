@@ -1,0 +1,6 @@
+{
+  "dataTheme": "stackoverflow-light",
+  "backgroundColor": "rgb(246, 246, 246)",
+  "color": "rgb(47, 51, 55)",
+  "fontSize": "18px"
+}

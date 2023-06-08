@@ -1,0 +1,14 @@
+@use "sass:meta";
+
+$path: "static/css/themes/";
+$min: ".min.css";
+$themes: "androidstudio", "atom-one-dark", "atom-one-light", "codepen-embed",
+    "color-brewer", "dark", "default", "github-dark", "github", "googlecode",
+    "monokai-sublime", "monokai", "night-owl", "nord", "obsidian",
+    "stackoverflow-light", "vs", "xcode";
+
+@each $theme in $themes {
+    code[data-theme="#{$theme}"] {
+        @include meta.load-css($path + $theme + $min);
+    }
+}

@@ -1,0 +1,95 @@
+<figure class="flex flex-col justify-center items-center max-w-lg mx-auto my-3">
+    <img
+        id="mainImage"
+        class="h-auto max-w-full rounded-lg"
+        src="/getFile?path={{imagePath}}"
+        alt=""
+    />
+    <figcaption
+        class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400"
+    >{{root}}</figcaption>
+</figure>
+
+<div class="py-4 overflow-y-auto flex justify-center items-center">
+    <ul class="space-y-2 font-medium">
+        <li>
+            <div
+                class="flex items-center p-2 rounded-lg text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 cursor-pointer"
+                data-drawer-target="drawer-navigation"
+                data-drawer-show="drawer-navigation"
+                aria-controls="drawer-navigation"
+            >
+                <box-icon
+                    type="solid"
+                    name="color"
+                    aria-hidden="true"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    color="currentColor"
+                ></box-icon>
+                <span class="flex-1 ml-3 whitespace-nowrap">Filters</span>
+            </div>
+        </li>
+        <li>
+            <div
+                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+                onclick="saveImageFile('{{root}}')"
+            >
+                <box-icon
+                    type="solid"
+                    name="save"
+                    aria-hidden="true"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    color="currentColor"
+                ></box-icon>
+                <span class="flex-1 ml-3 whitespace-nowrap">Save File</span>
+            </div>
+        </li>
+        <li>
+            <div
+                id="folder-name-change-container"
+                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+                data-modal-target="dialog"
+                data-modal-toggle="dialog"
+            >
+                <box-icon
+                    type="solid"
+                    name="rename"
+                    aria-hidden="true"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    color="currentColor"
+                ></box-icon>
+                <span class="flex-1 ml-3 whitespace-nowrap">Change File Name</span>
+            </div>
+        </li>
+        <li>
+            <div
+                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+                onclick="previewFile('{{root}}')"
+            >
+                <box-icon
+                    type="solid"
+                    name="file"
+                    aria-hidden="true"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    color="currentColor"
+                ></box-icon>
+                <span class="flex-1 ml-3 whitespace-nowrap">Preview File</span>
+            </div>
+        </li>
+        <li>
+            <div
+                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+                onclick="redirectToPath('{{root}}', true)"
+            >
+                <box-icon
+                    type="solid"
+                    name="folder"
+                    aria-hidden="true"
+                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    color="currentColor"
+                ></box-icon>
+                <span class="flex-1 ml-3 whitespace-nowrap">Show File In Folder</span>
+            </div>
+        </li>
+    </ul>
+</div>
